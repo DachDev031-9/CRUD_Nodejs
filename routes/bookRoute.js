@@ -3,7 +3,6 @@ const book = require("../models/bookModel");
 const router = express.Router();
 
 router.get("/GetAllBooks", (req, res) => {
-  const message = "Hello World";
   book.find({}).then((data) => {
     res.json(data);
   });
